@@ -1,6 +1,57 @@
 <!doctype html>
-<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow"><title>Quiz</title>
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#fff;color:#151515;border-left:4px solid #e00;
-font-family:"Red Hat Text","Segoe UI",Arial,sans-serif;padding:16px}p{margin:4px 0}</style></head>
-<body><div><p><strong>Quiz di fine giornata</strong></p><p>Apri il link fornito dall'istruttore.</p></div></body></html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Quiz OpenShift</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700&family=Red+Hat+Text:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root { --red: #ee0000; --ink: #151515; --ink-2: #4d4d4d; --ink-3: #707070; --soft: #f2f2f2; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      min-height: 100vh; display: flex; flex-direction: column; background: #fff; color: var(--ink);
+      font-family: "Red Hat Text", "Segoe UI", Arial, sans-serif; font-size: 18px; line-height: 1.55;
+      border-left: 4px solid var(--red);
+    }
+    header { display: flex; align-items: center; gap: 10px; padding: 14px 28px; border-bottom: 3px solid var(--soft); }
+    .mark { width: 14px; height: 14px; background: var(--red); }
+    .label { font-family: "Red Hat Display", Arial, sans-serif; font-weight: 700; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; color: var(--red); }
+    main { flex: 1; width: 100%; max-width: 980px; margin: 0 auto; padding: 72px 28px 48px; }
+    .eyebrow { font-family: "Red Hat Display", Arial, sans-serif; font-weight: 700; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--red); margin: 0 0 10px; }
+    h1 { font-family: "Red Hat Display", Arial, sans-serif; font-weight: 500; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; margin: 0 0 20px; }
+    .lead { font-size: 1.15rem; color: var(--ink-2); max-width: 720px; margin: 0 0 32px; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0 0 36px; }
+    .card { border-top: 4px solid var(--red); background: var(--soft); padding: 16px 18px; }
+    .card h2 { font-family: "Red Hat Display", Arial, sans-serif; font-weight: 700; font-size: 1rem; margin: 0 0 6px; }
+    .card p { margin: 0; font-size: .95rem; color: var(--ink-2); }
+    .note { border-left: 4px solid var(--ink-3); background: var(--soft); padding: 12px 16px; color: var(--ink-2); max-width: 720px; }
+    footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 12px 28px; font-size: .8rem; color: var(--ink-3); border-top: 1px solid var(--soft); }
+    footer strong { color: var(--ink); font-family: "Red Hat Display", Arial, sans-serif; }
+    @media (max-width: 720px) {
+      body { font-size: 16px; border-left-width: 3px; }
+      header, main, footer { padding-left: 16px; padding-right: 16px; }
+      main { padding-top: 40px; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header><span class="mark" aria-hidden="true"></span><span class="label">Red Hat Training</span></header>
+  <main>
+    <p class="eyebrow">Ripasso di fine giornata</p>
+    <h1>Quiz su OpenShift interattivi</h1>
+    <p class="lead">Brevi sessioni di domande a scelta multipla e SÌ / NO per ripassare i concetti della giornata di corso: OpenShift, Kubernetes e OpenShift Virtualization.</p>
+    <div class="cards">
+      <div class="card"><h2>Rispondi</h2><p>15 domande per sessione: teoria, comandi e "cosa c'è di errato qui?".</p></div>
+      <div class="card"><h2>Riprova</h2><p>Se sbagli, l'opzione viene esclusa e riprovi finché non trovi quella giusta.</p></div>
+      <div class="card"><h2>Ripassa</h2><p>Dopo ogni risposta corretta, una spiegazione consolida il concetto.</p></div>
+    </div>
+    <p class="note">Per iniziare, apri il link del quiz fornito dall'istruttore.</p>
+  </main>
+  <footer><span>Quiz interattivi per i corsi OpenShift</span><strong>Red Hat Training · Quiz</strong></footer>
+</body>
+</html>
